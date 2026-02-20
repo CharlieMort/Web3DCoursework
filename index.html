@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+    html, body {
+        margin: 0;
+        height: 100%;
+        background-color: navy;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #c {
+        width: 50%;
+        height: 50%;
+        display: block;
+    }
+
+    .titleBanner {
+      width: 55%;
+    }
+    </style>
+  </head>
+  <body>
+    <img src="public/titlebanner.png" class="titleBanner" />
+    <button id="animPlay">Slots</button>
+    <canvas id="c"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
