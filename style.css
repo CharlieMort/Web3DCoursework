@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Cartoon; /* set name */
+  src: url(public/Super\ Starfish.ttf); /* url of the font */
+}
+
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: blue;
+  font-family: Cartoon;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+#c {
+  width: 50%;
+  height: 50%;
+  display: block;
+}
+
+.titleBanner {
+  width: 45%;
+}
+
+.model-viewer {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.model-viewer > div > div {
+  position: relative;
+  width: 30vw;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.model-viewer > div > h2 {
+  font-size: 4rem;
+  margin: 0;
+  -webkit-text-stroke: black 0.2rem;
+  text-align: center;
+}
+
+.model-viewer canvas {
+  width: 25vw;
+  height: 25vw;
+}
+
+.model-viewer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  height: 30vw;
+  pointer-events: none;
+}
