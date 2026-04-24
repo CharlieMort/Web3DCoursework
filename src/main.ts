@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min';
 import { DRACOLoader, GLTF, GLTFLoader } from 'three/examples/jsm/Addons';
+import Model from './model';
 
 
 function main() {
@@ -17,17 +18,12 @@ function main() {
 	const camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
 	camera.position.set( 0, 10, 20 );
 
-	const clock = new THREE.Clock()
-	let mixer: THREE.AnimationMixer;
-	let actions: THREE.AnimationAction[] = []
-	let machineSpinning = false;
-
 	const controls = new OrbitControls( camera, canvas );
 	controls.target.set( 0, 5, 0 );
 	controls.update();
 
 	const scene = new THREE.Scene();
-	scene.background = new THREE.Color( 'black' );
+	scene.background = new THREE.Color( '#09bfff' );
 
 	{
 
@@ -54,37 +50,18 @@ function main() {
 
 	}
 	
-	let slotMachine: GLTF
-	{
-		const loader = new GLTFLoader();
-		loader.load("src/slotmachine2.glb", (x) => {
-			slotMachine = x;
-			slotMachine.scene.rotation.y -= 90
-			slotMachine.scene.position.set(10, 0, -10)
-			scene.add(slotMachine.scene)
-			mixer = new THREE.AnimationMixer(slotMachine.scene)
-			const animations = slotMachine.animations
+	let slotMachine = new Model("Slot Machine", "src/slotmachine2.glb")
+	let clawMachine = new Model("Claw Machine", "src/clawMachine.glb")
 
-			animations.forEach(clip => {
-				const action = mixer.clipAction(clip)
-				actions.push(action)
-			})
-			console.log(actions)
-		})
-	}
-	{
-		const btn = document.getElementById("animPlay")
-		btn?.addEventListener("click", () => {
-			console.log("SLOTS")
-			actions.forEach(action => {
-				console.log("playing" + action.getClip().name)
-				action.timeScale = 1
-				action.setLoop(THREE.LoopOnce, 1)
-				action.reset()
-				action.play();
-			})
-		})
-	}
+	slotMachine.setPosition(10, 0, -10)
+	slotMachine.setRotation(0, -90, 0)
+
+	clawMachine.setPosition(-10, 0, -10)
+	clawMachine.setRotation(0, -45, 0)
+
+	scene.add(slotMachine.group)
+	scene.add(clawMachine.group)
+
 
 	class ColorGUIHelper {
         object: any;
@@ -150,9 +127,8 @@ function main() {
 			camera.updateProjectionMatrix();
 		}
 
-		if (mixer) {
-			mixer.update(clock.getDelta())
-		}
+		clawMachine.update()
+		slotMachine.update()
 
 		renderer.render( scene, camera );
 	}
