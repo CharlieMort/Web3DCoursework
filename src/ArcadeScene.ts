@@ -44,7 +44,7 @@ class ArcadeScene {
         this.scene.add(floor.mesh)
         
 
-        let welcome = new Model("Welcome", "src/welcome-to-the-arcade.glb")
+        let welcome = new Model("Welcome", "./welcome-to-the-arcade.glb")
         welcome.group.scale.multiplyScalar(2)
         welcome.setRotation(90, 0, 0)
         welcome.setPosition(0,12,-40)
@@ -53,7 +53,7 @@ class ArcadeScene {
 		this.updates = []
 
 		{
-			let model = new Model("Claw Machine", "src/clawmachine.glb", true)
+			let model = new Model("Claw Machine", "./clawmachine.glb", true)
 			model.group.scale.multiplyScalar(0.175)
 			model.setPosition(4,-0.5,0)
 			model.setRotation(0,-Math.PI,0)
@@ -64,7 +64,7 @@ class ArcadeScene {
 			this.updates.push(model)
 		}
 		{
-			let model = new Model("Claw Machine", "src/clawmachine.glb", true)
+			let model = new Model("Claw Machine", "./clawmachine.glb", true)
 			model.group.scale.multiplyScalar(0.175)
 			model.setPosition(4,-0.5,2)
 			model.setRotation(0,-Math.PI,0)
@@ -75,7 +75,7 @@ class ArcadeScene {
 			this.updates.push(model)
 		}
 		{
-			let model = new Model("Claw Machine", "src/clawmachine.glb", true)
+			let model = new Model("Claw Machine", "./clawmachine.glb", true)
 			model.group.scale.multiplyScalar(0.175)
 			model.setPosition(4,-0.5,-2)
 			model.setRotation(0,-Math.PI,0)
@@ -86,7 +86,7 @@ class ArcadeScene {
 			this.updates.push(model)
 		}
 		{
-			let model = new Model("Claw Machine", "src/clawmachine.glb", true)
+			let model = new Model("Claw Machine", "./clawmachine.glb", true)
 			model.group.scale.multiplyScalar(0.175)
 			model.setPosition(4,-0.5,4)
 			model.setRotation(0,-Math.PI,0)
@@ -100,7 +100,7 @@ class ArcadeScene {
 
 
 		{
-			let model = new Model("Slot Machine", "src/slotmachine.glb", true)
+			let model = new Model("Slot Machine", "./slotmachine.glb", true)
 			model.group.scale.multiplyScalar(0.2)
 			model.setPosition(-4,-0.5,0)
 			model.setRotation(0,0,0)
@@ -111,7 +111,7 @@ class ArcadeScene {
 			this.updates.push(model)
 		}
 		{
-			let model = new Model("Slot Machine", "src/slotmachine.glb", true)
+			let model = new Model("Slot Machine", "./slotmachine.glb", true)
 			model.group.scale.multiplyScalar(0.2)
 			model.setPosition(-4,-0.5,2)
 			model.setRotation(0,0,0)
@@ -122,7 +122,7 @@ class ArcadeScene {
 			this.updates.push(model)
 		}
 		{
-			let model = new Model("Slot Machine", "src/slotmachine.glb", true)
+			let model = new Model("Slot Machine", "./slotmachine.glb", true)
 			model.group.scale.multiplyScalar(0.2)
 			model.setPosition(-4,-0.5,-2)
 			model.setRotation(0,0,0)
@@ -133,7 +133,7 @@ class ArcadeScene {
 			this.updates.push(model)
 		}
 		{
-			let model = new Model("Slot Machine", "src/slotmachine.glb", true)
+			let model = new Model("Slot Machine", "./slotmachine.glb", true)
 			model.group.scale.multiplyScalar(0.2)
 			model.setPosition(-4,-0.5,4)
 			model.setRotation(0,0,0)
@@ -147,7 +147,7 @@ class ArcadeScene {
 
 
 		{
-			let model = new Model("Robot1", "src/robot.glb", true)
+			let model = new Model("Robot1", "./robot.glb", true)
 			model.group.scale.multiplyScalar(0.75)
 			model.setPosition(-15,-1,-50)
 			model.setRotation(0,-Math.PI/2,0)
@@ -158,7 +158,7 @@ class ArcadeScene {
 			this.updates.push(model)
 		}
 		{
-			let model = new Model("Robot2", "src/robot.glb", true)
+			let model = new Model("Robot2", "./robot.glb", true)
 			model.group.scale.multiplyScalar(0.75)
 			model.setPosition(15,-1,-50)
 			model.setRotation(0,-Math.PI/2,0)
@@ -293,7 +293,7 @@ function main() {
 	const sound = new THREE.Audio(listener)
 	
 	const audioLoader = new THREE.AudioLoader()
-	audioLoader.load("src/Starjunk 95 Groove District.mp3", function( buffer ) {
+	audioLoader.load("./Starjunk 95 Groove District.mp3", function( buffer ) {
 		sound.setBuffer( buffer );
 		sound.setLoop(true);
 		sound.setVolume(0.5);
