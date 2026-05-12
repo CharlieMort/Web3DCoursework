@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claw Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="public/titlebanner.png" class="titleBanner" />
+    <div class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/robot.html">Robot</a>
+        <a href="/claw-machine.html">Claw Machine</a>
+        <a href="/slot-machine.html">Slot Machine</a>
+        <a href="/scene.html">The ARCADE</a>
+    </div>
+    <div class="showcase-wrapper">
+        <div class="model-card">
+            <div class="model-card-title">
+            <h2>Claw Machine</h2>
+            </div>
+            <div class="model-canvas-wrapper">
+            <canvas id="clawmachine"></canvas>
+            <img id="clawmachineframe" src="/frameborder1.png"></img>
+            </div>
+            <div class="model-buttons">
+                <button id="clawmachinewireframe" class="image-button">Enable Wireframe</button>
+                <button id="clawmachineanimation" class="image-button">Play Animation</button>
+            </div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/wNtkpVCSqDE?si=yoM4xuCFI19Qhdu-&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h1>Time Taken - 7:34:20</h1>
+        </div>
+    </div>
+    <div class="about-box">
+        <h2>About</h2>
+        <p>
+            I started this model straight after the claw machine but finished it after the robot. It took just under <b>8 hours</b> in total and was really fun and i learnt the most from this model. I gained the basics after the Claw Machine so went in with a new perspective of what i had to do.<br /><br />
+            Despite this, the claw defeated me. You can see in the video how long it takes me to model the pincers of the claw - i even switched operating systems instead of coming back to it - curves where almost the end of it but then I mustered the courage and found a different way of doing it that wasnt a perfect curve but looks it from far enough away. I developed the machine by itself and then the claw separately, then scaled down the claw and put it in the machine.<br /><br />
+            The animation is the most complex of the 3 models, despite being not that complex in my opinion is was quite annoying to do haha. The windows and prize flap also use actual <b>transparent textures</b> to mimic the slight distortion when looking through glass rather than just empty space.
+        </p>
+    </div>
+    <script type="module" src="/src/timer.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

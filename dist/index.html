@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Charlie Mortimer Page</title>
+    <script type="module" crossorigin src="/assets/index-CMDioFHx.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cbg44l_h.css">
+  </head>
+  <body>
+    <img src="/assets/titlebanner-_JV3Yiod.png" class="titleBanner" />
+    <div class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/robot.html">Robot</a>
+        <a href="/claw-machine.html">Claw Machine</a>
+        <a href="/slot-machine.html">Slot Machine</a>
+    </div>
+    <div class="about-box">
+      <h2>Welcome to the Arcade (and my web3d coursework submission)</h2>
+      <h3>About The Site</h3>
+      <p>
+        As mentioned, this is my web3d coursework submission. Here you'll find 3 distinct 3d models all made in Blender and more importantly all of the process was <b>recorded</b>. Click <i>find out more</i> next to each of the model highlights below to be taken to a dedicated page about the model where you can also watch the timelapse.
+      </p>
+      <p>
+        A bit more about the site as a whole. I've made probably over a hundred different websites in my time - meaning I'm very confident in doing so, however i've always wanted to learn 3d modelling but never did. So i took this module as an opportunity to have fun with the website whilst learning 3d modelling hence all the weird cartoon-y graphics and animations. I appreciate the look and feel of the website might not be as smooth or UX efficient but that's not the point.
+      </p>
+      <p>
+        One of the key points of my submission is that all of the CSS and styling is written in <b>pure CSS</b> no frameworks. I think for modules like this CSS should be taught to an extent instead of pushing bootstrap as it pushes conformity in what i'd say an expressive module - but that's just my opinion and i've done alot of CSS.
+      </p>
+      <h3>Developing the Site</h3>
+      <p>
+        Writing this site was alot of fun - i already had a threeJS template that i made for previous projects so used that as it uses <b>TypeScript</b> along with ThreeJS which greatly improves the development process with autocomplete and in editor type checking. <br>
+        As mentioned above, each model has its own page with a recording timelapse at <b>2000% original speed</b> showing the whole process of modelling, then each page was developed as a template. <br>
+        Finally there is the Arcade Scene, featuring a <b>sound visualiser</b> (because why not) and a scene containing all the models.
+      </p>
+    </div>
+    <div class="model-viewer">
+      <div class="model-card">
+        <div class="model-card-title">
+          <h2>Slot Machine</h2>
+          <a href="/slot-machine.html">Find Out More</a>
+        </div>
+        <div class="model-canvas-wrapper">
+          <canvas id="slotmachine"></canvas>
+          <img id="slotmachineframe" src="/frameborder1.png"></img>
+        </div>
+        <div class="model-buttons">
+          <button id="slotmachinewireframe" class="image-button">Enable Wireframe</button>
+          <button id="slotmachineanimation" class="image-button">Play Animation</button>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-card-title">
+          <h2>Robot</h2>
+          <a href="/robot.html">Find Out More</a>
+        </div>
+        <div class="model-canvas-wrapper">
+          <canvas id="robot"></canvas>
+          <img id="robotframe" src="/assets/frameborder1-DE6BQYB4.png"></img>
+        </div>
+        <div class="model-buttons">
+          <button id="robotwireframe" class="image-button">Enable Wireframe</button>
+          <button id="robotanimation" class="image-button">Play Animation</button>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-card-title">
+          <h2>Claw Machine</h2>
+          <a href="/claw-machine.html">Find Out More</a>
+        </div>
+        <div class="model-canvas-wrapper">
+          <canvas id="clawmachine"></canvas>
+          <img id="clawmachineframe" src="/assets/frameborder1-DE6BQYB4.png"></img>
+        </div>
+        <div class="model-buttons">
+          <button id="clawmachinewireframe" class="image-button">Enable Wireframe</button>
+          <button id="clawmachineanimation" class="image-button">Play Animation</button>
+        </div>
+      </div>
+      </div>
+    <div class="scene-controls">
+      <button id="playpause">Play/Pause Music</button>
+      <button id="fullscreen">Fullscreen</button>
+      <button id="reload">Reload</button>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+    </div>
+    <h1>Click on the canvas to look around and move with WASD</h1>
+    <canvas id="c"></canvas>
+  </body>
+</html>

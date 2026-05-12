@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="public/titlebanner.png" class="titleBanner" />
+    <div class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/robot.html">Robot</a>
+        <a href="/claw-machine.html">Claw Machine</a>
+        <a href="/slot-machine.html">Slot Machine</a>
+        <a href="/scene.html">The ARCADE</a>
+    </div>
+    <div class="showcase-wrapper">
+        <div class="model-card">
+            <div class="model-card-title">
+            <h2>Slot Machine</h2>
+            </div>
+            <div class="model-canvas-wrapper">
+            <canvas id="slotmachine"></canvas>
+            <img id="slotmachineframe" src="/frameborder1.png"></img>
+            </div>
+            <div class="model-buttons">
+                <button id="slotmachinewireframe" class="image-button">Enable Wireframe</button>
+                <button id="slotmachineanimation" class="image-button">Play Animation</button>
+            </div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/AFxtqBlCv4Q?si=MEE2HLfJ2kDt-CLK&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h1>Time Taken - 4:25:20</h1>
+        </div>
+    </div>
+    <div class="about-box">
+        <h2>About</h2>
+        <p>
+            This was the first model I developed, so was a definite learning experience. I had the idea for recording the timelapses part way through making this model but the total recorded time for this was around <b>4 hours 15 minutes</b> but of course was longer due to the missing first part.<br /><br />
+            In the video you see me first draw the textures directly on the wheels, little did i know i wouldnt save that properly and after modeling the handle the previous work would turn black <b>Whoops</b>. This led me to create the textures in <b>Photopea (online photoshop)</b> and learning to figure that out as well. This also taught me alot more about UV unwrapping and the whole process of texturing which i enjoyed.<br /><br />
+            The animation for this model is quite simple as it was my first time doing animations and in hindsight i could've done this alot easier, I think, but the animations works and is pretty cool - if i had more time i definitely add more effects either in ThreeJS or blender to make the winning spin much more impactful.
+        </p>
+    </div>
+    <script type="module" src="/src/timer.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
