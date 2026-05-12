@@ -23,5 +23,6 @@ const updateTimer = (v, t) => {
     t.innerText = `Time Taken - ${convertTime(currentTime)}`
 }
 
-let currentTime = 0;
-setInterval(updateTimer.bind(null, video, timer), 50)
+// let currentTime = 0;
+// setInterval(updateTimer.bind(null, video, timer), 50)
+// not used anymore as moved to iframe :(

@@ -87,7 +87,7 @@ function ModelViewer(id: string, cameraPos: THREE.Vector3, name: string, path: s
 	let button1Idx = Math.floor(Math.random()*4)+1;
 	let button1Element = document.getElementById(`${id}wireframe`)
 	setInterval(() => {
-		button1Element!.style = `background-image: url("/public/button${button1Idx}.png");`
+		button1Element!.style = `background-image: url("./public/button${button1Idx}.png");`
 		button1Idx ++;
 		if (button1Idx > 4) {
 			button1Idx = 1
@@ -101,7 +101,7 @@ function ModelViewer(id: string, cameraPos: THREE.Vector3, name: string, path: s
 	let button2Idx = Math.floor(Math.random()*4)+1;
 	let button2Element = document.getElementById(`${id}animation`)
 	setInterval(() => {
-		button2Element!.style = `background-image: url("/public/button${button2Idx}.png");`
+		button2Element!.style = `background-image: url("./public/button${button2Idx}.png");`
 		button2Idx ++;
 		if (button2Idx > 4) {
 			button2Idx = 1
@@ -115,6 +115,6 @@ function ModelViewer(id: string, cameraPos: THREE.Vector3, name: string, path: s
 	requestAnimationFrame( render );
 }
 
-let slot = ModelViewer("slotmachine", new THREE.Vector3(0, 20, 25), "Slot Machine", "src/slotmachine.glb")
-let robot = ModelViewer("robot", new THREE.Vector3(0, 30, 40), "Robot", "src/robot.glb", new THREE.Vector3(0, 12, 0))
-let claw = ModelViewer("clawmachine", new THREE.Vector3(0, 20, 25), "Claw Machine", "src/clawmachine.glb")
+let slot = ModelViewer("slotmachine", new THREE.Vector3(0, 20, 25), "Slot Machine", "./src/slotmachine.glb")
+let robot = ModelViewer("robot", new THREE.Vector3(0, 30, 40), "Robot", "./src/robot.glb", new THREE.Vector3(0, 12, 0))
+let claw = ModelViewer("clawmachine", new THREE.Vector3(0, 20, 25), "Claw Machine", "./src/clawmachine.glb")
