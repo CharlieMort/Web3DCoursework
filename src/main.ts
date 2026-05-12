@@ -115,6 +115,6 @@ function ModelViewer(id: string, cameraPos: THREE.Vector3, name: string, path: s
 	requestAnimationFrame( render );
 }
 
-let slot = ModelViewer("slotmachine", new THREE.Vector3(0, 20, 25), "Slot Machine", "./src/slotmachine.glb")
-let robot = ModelViewer("robot", new THREE.Vector3(0, 30, 40), "Robot", "./src/robot.glb", new THREE.Vector3(0, 12, 0))
-let claw = ModelViewer("clawmachine", new THREE.Vector3(0, 20, 25), "Claw Machine", "./src/clawmachine.glb")
+let slot = ModelViewer("slotmachine", new THREE.Vector3(0, 20, 25), "Slot Machine", "./slotmachine.glb")
+let robot = ModelViewer("robot", new THREE.Vector3(0, 30, 40), "Robot", "./robot.glb", new THREE.Vector3(0, 12, 0))
+let claw = ModelViewer("clawmachine", new THREE.Vector3(0, 20, 25), "Claw Machine", "./clawmachine.glb")
