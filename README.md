@@ -13,3 +13,9 @@ All the timelapsed videos were contained here, but due to large file size they c
 - [Slot Machine Timelapse](https://youtu.be/AFxtqBlCv4Q)
 
 For the blender files, youll likely have to re import the textures - not sure how to fix this but ive included all the textures (even old ones) just select the one with same name
+
+## Development
+
+To run the project locally first install the packages with `npm ci` and then `npx vite` to run a local development server.
+
+To build the project run `npx vite build` with the `vite.config.ts` configuration.
