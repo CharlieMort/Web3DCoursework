@@ -224,10 +224,8 @@ function main() {
 		mouse.x = (x / window.innerWidth) * 2 - 1;
 		mouse.y = -(y / window.innerHeight) * 2 + 1;
 
-		// Create ray from camera through mouse position
 		raycaster.setFromCamera(mouse, camera);
 
-		// Check intersections
 		const intersects = raycaster.intersectObjects(hoverables, true);
 
 		if (intersects.length > 0) {
@@ -296,7 +294,7 @@ function main() {
 	audioLoader.load("./Starjunk 95 Groove District.mp3", function( buffer ) {
 		sound.setBuffer( buffer );
 		sound.setLoop(true);
-		sound.setVolume(0.5);
+		sound.setVolume(0.2);
 		sound.play();
 	});
 
@@ -397,7 +395,6 @@ function main() {
 		const right = new THREE.Vector3();
 		right.crossVectors(forward, camera.up).normalize();
 
-		// Apply movement
 		camera.position.add(forward.multiplyScalar(velocity.z * 10 * delta));
 		camera.position.add(right.multiplyScalar(velocity.x * 10 * delta));
 		camera.position.set(
